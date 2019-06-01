@@ -15,7 +15,7 @@ def get_concat_h(im1, im2):
 
 if __name__ == "__main__":
 
-    input_images = glob.glob('images_hi/*.jpg')
+    input_images = glob.glob('image_data/*.jpg')
     print(input_images)
 
     im1 = Image.open(str(input_images[0]))
@@ -53,5 +53,5 @@ if __name__ == "__main__":
         im1_crop = im1.crop((w/2-25,0,w/2+25,2304))
         im_joined = get_concat_h(im1_crop,im_joined)
 
-    im_joined.show()
+#    im_joined.show()
     im_joined.save('joined.jpg')
